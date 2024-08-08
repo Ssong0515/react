@@ -34,18 +34,18 @@ Shape.prototype.area = function(){
 
 
 // ES5 방법2
-Shape.prototype = {
-  move: function(x, y){
-    this.x = x;
-    this.y = y;
-  },
-  area: function(){
-    return 0;
-  }
-}
+// Shape.prototype = {
+//   move: function(x, y){
+//     this.x = x;
+//     this.y = y;
+//   },
+//   area: function(){
+//     return 0;
+//   }
+// }
 
 var s1 = Shape.create(0, 0);
 console.log(s1.area());
 
-var s2 = new Shape2(0, 0);
+var s2 = new Shape(0, 0);
 console.log(s2.area());
