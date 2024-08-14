@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import App2 from "./App2.jsx";
 import './index.css'
 import Clock from "./components/Clock.jsx";
+import App3 from "./App3.jsx";
 
 // id값이 root인 태그 검색
 // render(): 실제로 화면을 그려주는 함수
@@ -15,8 +16,8 @@ createRoot(document.getElementById('root')).render(
 
       {/* 리액트는 JSX 문법을 사용하기 때문에 리액트 컴포넌트 사용 시, 반드시 종료 태그가 필수*/}
       {/* 종료태그를 사용하지 않을 경우 시작 태그의 마지막에 '/' 기호를 추가해야 함 */}
-      <App2 />
-
+      {/*<App2 />*/}
+      <App3/>
   </StrictMode>,
 )
 
