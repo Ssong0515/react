@@ -7,8 +7,7 @@ function ImageGallery() {
     const galleryRef = useRef(null);
 
     const filteredImages = useMemo(() => {
-        // return images.filter(image => image.id % 2 === 0);
-        return images
+        return images.filter(image => image.id % 2 === 0);
     }, [images]);
 
     const handleImageClick = useCallback((image) => {
