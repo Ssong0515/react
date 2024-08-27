@@ -8,14 +8,16 @@ import Chat from "./components/Chat.jsx";
 import WelcomeDialog2 from "./components/WelcomeDialog2.jsx";
 import SignUpDialog from "./components/SignUpDialog.jsx";
 import ProfileCard from "./components/ProfileCard.jsx";
+import Summer from "./components/Summer.jsx";
+import Chap3 from "./components/Chap3.jsx";
 
 function App() {
 
     return (
-        <div className={'container text-center mt-5'}>
+        <div>
             {/*<h3>상태 공유하기</h3>*/}
             {/*<Parent/>*/}
-            
+
             {/*<br/><hr/><br/>*/}
             {/*<h3>상태 끌어올리기</h3>*/}
             {/*<Parent2/>*/}
@@ -34,10 +36,12 @@ function App() {
             {/*<h3>Specialization</h3>*/}
             {/*<WelcomeDialog2/>*/}
 
-            <h3>Containment + Specialization</h3>
-            <SignUpDialog/>
-            <ProfileCard/>
+            {/*<h3>Containment + Specialization</h3>*/}
+            {/*<SignUpDialog/>*/}
+            {/*<ProfileCard/>*/}
 
+            {/*<Summer/>*/}
+            <Chap3/>
 
 
         </div>
