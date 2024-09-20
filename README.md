@@ -173,4 +173,6 @@ import { create } from "zustand";
                         <Route path={'profile2/:username/:age'} element={<Profile2/>}/>
                     </Route>               
   ```
+
+  ## 리액트9
   
