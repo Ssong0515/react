@@ -51,7 +51,7 @@
 
 #### zustand
 
-- ***hook을 사용하기 때문에 반드시 앞에 use를 붙여야 함***
+- > ***hook을 사용하기 때문에 반드시 앞에 use를 붙여야 함***
 
 - 리액트에서 사용할 수 있는 상태관리 라이브러리
 
@@ -124,7 +124,7 @@ import { create } from "zustand";
   - Outlet : 
     - 현재 선택 된 경로의 컴포넌트를 화면에 표시
 
-  - 쿼리스트링 : 
+  - >쿼리스트링 방식 :  
     - 기존의 get 방식으로 웹 브라우저의 주소창에 파라미터를 함께 전달하는 방식
     - Route 컴포넌트의 path 속성의 변경이 없음
     - element 속성에서 지정한 컴포넌트에서 몇가지 옵션 사항을 사용할 수 있음
@@ -135,44 +135,52 @@ import { create } from "zustand";
       - state : 페이지 이동 시 임의로 추가할 상태 값
       - key : location 객체의 고유한 값
 
-  - `useLocation()`, `useSearchParams()` 훅을 사용하여 데이터를 가져올 수 있음
-  - `useLocation` 훅을 사용하여 데이터를 가져오면 원하는 파라미터 값을 가져오기 위해 직접 파싱을 해야 함
-  - `useSearchParams` 훅을 사용하여 데이터를 가져오면 파라미터 데이터만 따로 가져올 수 있음
+    - `useLocation()`, `useSearchParams()` 훅을 사용하여 데이터를 가져올 수 있음
+    - `useLocation` 훅을 사용하여 데이터를 가져오면 원하는 파라미터 값을 가져오기 위해 직접 파싱을 해야 함
+    - `useSearchParams` 훅을 사용하여 데이터를 가져오면 파라미터 데이터만 따로 가져올 수 있음
 
-  ### 사용법
-  ```
-  기존 url?파라미터1=값&파라미터2=값2
-  ```
+    ### 사용법
+    ```
+    기존 url?파라미터1=값&파라미터2=값2
+    ```
+    <br>
 
-  - URL파라미터 : RestAPI 방식의 주소형태로 구성되는 파라미터
-  - Route 컴포넌트의 path 속성값 뒤에 `/`와 `:파라미터명`을 사용하여 데이터를 전달하는 방식
-  - rest 방식으로 구성되어 있을 경우 사용
-  - 연결된 컴포넌트에서 `useParams()` 훅을 사용해야 함
+  - >**URL파라미터 방식**
+    - URL파라미터 : RestAPI 방식의 주소형태로 구성되는 파라미터
+    - Route 컴포넌트의 path 속성값 뒤에 `/`와 `:파라미터명`을 사용하여 데이터를 전달하는 방식
+    - rest 방식으로 구성되어 있을 경우 사용
+    - 연결된 컴포넌트에서 `useParams()` 훅을 사용해야 함
 
-  ### 사용법
-  ```
-  기존 url/:파라미터명1/:파라미터명2
-  <Route path={url/>:test1/:test2} element={<Url />} />
-  ```
+    ### 사용법
 
-  - useNavigate() : Link 컴포넌트를 사용하지 않고 다른 페이지로 이동하는 훅
+    ```
+    기존 url/:파라미터명1/:파라미터명2
+    <Route path={url/:test1/:test2} element={<Url />} />
+    ```
+    <br>
+  - >useNavigate() : Link 컴포넌트를 사용하지 않고 다른 페이지로 이동하는 훅
 
-  ### 사용법
-  ```
-  const navigate = useNavigate();
-  navigate(-1);
-  History 를 사용하여 이전 페이지로 이동, 음수 사용 시 이전페이지로 이동, 양수 사용 시 다음 페이지로 이동
-  navigate(url);
-  지정한 URL로 이동
-  ```
+    ### 사용법
+    ```
+    const navigate = useNavigate();
+    navigate(-1);
+    ```
+    *History 를 사용하여 이전 페이지로 이동, 음수 사용 시 이전페이지로 이동, 양수 사용 시 다음 페이지로 이동
 
-  ```
-  <Route path={'/pages'}>
-                        <Route index element={<Signup/>} />
-                        <Route path={'logout'} element={<Logout/>} />
-                        <Route path={'profile2/:username/:age'} element={<Profile2/>}/>
-                    </Route>               
-  ```
+    ```
+    navigate(url);
+    ```
+    *지정한 URL로 이동*
+    <br><br>
+    ```
+    <Route path={'/pages'}>
+      <Route index element={<Signup/>} />
+      <Route path={'logout'} element={<Logout/>} />
+      <Route path={'profile2/:username/:age'} element={<Profile2/>}/>
+    </Route>
+    ```
+
+
 
   ## 리액트9
   
